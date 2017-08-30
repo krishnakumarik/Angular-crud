@@ -1,0 +1,57 @@
+ 
+<div class="container">
+  
+  
+  <h1>{{title}}</h1>
+  
+  <h2>Create data</h2>
+  <div class="container">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="name">FirstName:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control"  placeholder="firstName" [(ngModel)]="user2.firstname" name="firstname" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >LastName:</label>
+        <div class="col-sm-5">          
+          <input type="text" class="form-control" placeholder="lastname" [(ngModel)]="user2.lastname" name="lastname"  required>
+        </div>
+      </div>
+     
+      <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" (click)="addEmployee()">add</button>
+        </div>
+      </div>
+      
+      </form>
+  </div>
+
+
+      <h2>Read data & (Delete Data):</h2>
+  <table class=" table table-bordered">
+      <thead>
+        <tr>
+          <th width=400>FirstName</th>
+          <th width=400>LastName</th>
+          <th width=200>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+           <td>{{user2.firstname}}</td>
+          <td>{{user2.lastname}}</td>
+          <td>
+            <a class=" btn btn-success" (click)="editemployee(i)" >edit</a>
+            <a class=" btn btn-danger" (click)="deleteemployee(i)">delete</a>
+  
+          </td>
+        </tr>
+        
+   </tbody>
+    </table>
+</div>
+  
+  
